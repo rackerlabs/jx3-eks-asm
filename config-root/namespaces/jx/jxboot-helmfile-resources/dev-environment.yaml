@@ -1,0 +1,41 @@
+# Source: jxboot-helmfile-resources/templates/environments.yaml
+apiVersion: jenkins.io/v1
+kind: Environment
+metadata:
+  labels:
+    env: "dev"
+    team: jx
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: "dev"
+  annotations:
+    meta.helm.sh/release-name: 'jxboot-helmfile-resources'
+  namespace: jx
+spec:
+  source:
+    ref: "master"
+    url: https://github.com/rackerlabs/jx3-eks-asm.git
+  kind: Development
+  label: Development
+  namespace: jx
+  promotionStrategy: "Never"
+  webHookEngine: "Lighthouse"
+  teamSettings:
+    appsRepository: https://jenkins-x-charts.github.io/repo
+    defaultScheduler:
+      apiVersion: jenkins.io/v1
+      kind: Scheduler
+      name: jx-meta-pipeline
+    dockerRegistryOrg: ""
+    envOrganisation: todo
+    gitServer: https://github.com
+    kubeProvider: "eks"
+    pipelineUsername: "PaulRepo"
+    pipelineUserEmail: "jenkins-x@googlegroups.com"
+    prowConfig: Scheduler
+    storageLocations:
+      - bucketUrl: "s3://logs-tf-cf-eks-cluster-2022062913025080120000000a"
+        classifier: "logs"
+      - bucketUrl: "s3://reports-tf-cf-eks-cluster-20220629130250801200000008"
+        classifier: "reports"
+      - bucketUrl: "s3://repository-tf-cf-eks-cluster-20220629130250801200000009"
+        classifier: "repository"
