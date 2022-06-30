@@ -28,10 +28,10 @@ jxRequirements:
     gitKind: github
     gitName: github
     gitServer: https://github.com
-    project: "060066518084"
+    project: "153787536644"
     provider: eks
     region: us-east-1
-    registry: 060066518084.dkr.ecr.us-east-1.amazonaws.com
+    registry: 153787536644.dkr.ecr.us-east-1.amazonaws.com
   environments:
   - key: dev
     owner: rackerlabs
@@ -39,7 +39,7 @@ jxRequirements:
   - key: staging
   - key: production
   ingress:
-    domain: 184.72.190.191.nip.io
+    domain: change.me
     kind: ingress
     namespaceSubDomain: -cert-manager.
     tls:
@@ -52,11 +52,11 @@ jxRequirements:
   secretStorage: secretsManager
   storage:
   - name: logs
-    url: s3://logs-tf-cf-eks-cluster-2022062913025080120000000a
+    url: s3://logs-tf-cf-eks-cluster-20220630080842722200000007
   - name: reports
-    url: s3://reports-tf-cf-eks-cluster-20220629130250801200000008
+    url: s3://reports-tf-cf-eks-cluster-20220630080842724400000008
   - name: repository
-    url: s3://repository-tf-cf-eks-cluster-20220629130250801200000009
+    url: s3://repository-tf-cf-eks-cluster-20220630080842725900000009
   terraform: true
   vault: {}
   webhook: lighthouse

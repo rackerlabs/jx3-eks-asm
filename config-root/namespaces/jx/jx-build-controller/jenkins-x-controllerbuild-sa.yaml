@@ -10,6 +10,6 @@ metadata:
     heritage: Helm
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::060066518084:role/tf-cf-eks-cluster-build-ctrl
+    eks.amazonaws.com/role-arn: arn:aws:iam::153787536644:role/tf-cf-eks-cluster-build-ctrl
     meta.helm.sh/release-name: 'jx-build-controller'
   namespace: jx
