@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        PaulRepo/standard-usage-schemas: true
         rackerlabs/jx3-eks-asm: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        PaulRepo/standard-usage-schemas: merge
         rackerlabs/jx3-eks-asm: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - rackerlabs/jx3-eks-asm
+        - PaulRepo/standard-usage-schemas
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - rackerlabs/jx3-eks-asm
+        - PaulRepo/standard-usage-schemas
       target_url: http://lighthouse-jx.18.211.142.190.nip.io/merge/status
 kind: ConfigMap
 metadata:
