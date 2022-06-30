@@ -11,4 +11,4 @@ metadata:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 data:
   kaniko.flags: "--skip-unused-stages --snapshotMode=redo"
-  docker.registry: 153787536644.dkr.ecr.us-east-1.amazonaws.com
+  docker.registry: 868719706466.dkr.ecr.us-east-1.amazonaws.com

@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - rackerlabs/jx3-eks-asm
-      target_url: http://lighthouse-jx.44.206.107.204.nip.io/merge/status
+      target_url: http://lighthouse-jx./merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null

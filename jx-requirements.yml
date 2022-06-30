@@ -5,26 +5,43 @@ spec:
     enabled: false
     schedule: ""
   cluster:
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    clusterName: tf-cf-eks-cluster
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
     gitKind: github
     gitName: github
     gitServer: https://github.com
+    project: "868719706466"
     provider: eks
+    region: us-east-1
+    registry: 868719706466.dkr.ecr.us-east-1.amazonaws.com
   environments:
   - key: dev
+    owner: rackerlabs
+    repository: jx3-eks-asm
   - key: staging
   - key: production
   ingress:
-    domain: ""
-    externalDNS: false
+    domain: 3.230.121.193.nip.io
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: PaulRepo
   repository: nexus
   secretStorage: secretsManager
+  storage:
+  - name: logs
+    url: s3://logs-tf-cf-eks-cluster-2022063008565297390000000b
+  - name: reports
+    url: s3://reports-tf-cf-eks-cluster-20220630085644893400000008
+  - name: repository
+    url: s3://repository-tf-cf-eks-cluster-20220630085644895800000009
+  terraform: true
   vault: {}
   webhook: lighthouse

@@ -4,7 +4,7 @@ kind: ServiceAccount
 metadata:
   name: "tekton-bot"
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::153787536644:role/tf-cf-eks-cluster-tekton-bot
+    eks.amazonaws.com/role-arn: arn:aws:iam::868719706466:role/tf-cf-eks-cluster-tekton-bot
     meta.helm.sh/release-name: 'jxboot-helmfile-resources'
   namespace: jx
   labels:
