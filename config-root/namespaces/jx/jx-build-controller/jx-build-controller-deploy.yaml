@@ -57,7 +57,7 @@ spec:
             - name: GIT_SECRET_MOUNT_PATH
               value: /secrets/git
             - name: AWS_REGION
-              value: us-east-1
+              value: ap-south-1
             - name: GIT_AUTHOR_EMAIL
               value: jenkins-x@googlegroups.com
             - name: GIT_AUTHOR_NAME
