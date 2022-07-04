@@ -33,9 +33,9 @@ spec:
     pipelineUserEmail: "jenkins-x@googlegroups.com"
     prowConfig: Scheduler
     storageLocations:
-      - bucketUrl: "s3://logs-tf-cf-eks-cluster-20220704131509187100000008"
+      - bucketUrl: "s3://logs-tf-cf-eks-cluster-20220704152235459800000008"
         classifier: "logs"
-      - bucketUrl: "s3://reports-tf-cf-eks-cluster-20220704131509187800000009"
+      - bucketUrl: "s3://reports-tf-cf-eks-cluster-20220704152235459600000007"
         classifier: "reports"
-      - bucketUrl: "s3://repository-tf-cf-eks-cluster-20220704131509186600000007"
+      - bucketUrl: "s3://repository-tf-cf-eks-cluster-20220704152235462600000009"
         classifier: "repository"
