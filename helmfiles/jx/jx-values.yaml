@@ -39,7 +39,7 @@ jxRequirements:
   - key: staging
   - key: production
   ingress:
-    domain: 52.206.100.40.nip.io
+    domain: change.me
     kind: ingress
     namespaceSubDomain: -jx.
     tls:
@@ -52,11 +52,11 @@ jxRequirements:
   secretStorage: secretsManager
   storage:
   - name: logs
-    url: s3://logs-tf-cf-eks-cluster-20220704152235459800000008
+    url: s3://logs-tf-cf-eks-cluster-20220705105025208900000008
   - name: reports
-    url: s3://reports-tf-cf-eks-cluster-20220704152235459600000007
+    url: s3://reports-tf-cf-eks-cluster-20220705105025208900000009
   - name: repository
-    url: s3://repository-tf-cf-eks-cluster-20220704152235462600000009
+    url: s3://repository-tf-cf-eks-cluster-2022070510502990680000000b
   terraform: true
   vault: {}
   webhook: lighthouse

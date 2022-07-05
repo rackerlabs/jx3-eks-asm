@@ -37,13 +37,13 @@ spec:
             - -resync-interval
             - 60s
             - -archived-logs-url-template
-            - s3://logs-tf-cf-eks-cluster-20220704152235459800000008/jenkins-x/logs/{{.Owner}}/{{.Repository}}/{{if hasPrefix .Branch "pr"}}{{.Branch | upper}}{{else}}{{.Branch}}{{end}}/{{.Build}}.log
+            - s3://logs-tf-cf-eks-cluster-20220705105025208900000008/jenkins-x/logs/{{.Owner}}/{{.Repository}}/{{if hasPrefix .Branch "pr"}}{{.Branch | upper}}{{else}}{{.Branch}}{{end}}/{{.Build}}.log
             - -archived-pipelines-url-template
-            - s3://logs-tf-cf-eks-cluster-20220704152235459800000008/jenkins-x/logs/{{.Owner}}/{{.Repository}}/{{if hasPrefix .Branch "pr"}}{{.Branch | upper}}{{else}}{{.Branch}}{{end}}/{{.Build}}.yaml
+            - s3://logs-tf-cf-eks-cluster-20220705105025208900000008/jenkins-x/logs/{{.Owner}}/{{.Repository}}/{{if hasPrefix .Branch "pr"}}{{.Branch | upper}}{{else}}{{.Branch}}{{end}}/{{.Build}}.yaml
             - -archived-pipelineruns-url-template
-            - s3://logs-tf-cf-eks-cluster-20220704152235459800000008/jenkins-x/pipelineruns/{{.Namespace}}/{{.Name}}.yaml
+            - s3://logs-tf-cf-eks-cluster-20220705105025208900000008/jenkins-x/pipelineruns/{{.Namespace}}/{{.Name}}.yaml
             - -pipeline-trace-url-template
-            - http://grafana-jx-observability.52.206.100.40.nip.io/explore?left=%5B%22now%22,%22now%22,%22Tempo%22,%7B%22query%22:%22{{.TraceID}}%22%7D%5D
+            - http://grafana-jx-observability.change.me/explore?left=%5B%22now%22,%22now%22,%22Tempo%22,%7B%22query%22:%22{{.TraceID}}%22%7D%5D
             - -log-level
             - INFO
           env:
