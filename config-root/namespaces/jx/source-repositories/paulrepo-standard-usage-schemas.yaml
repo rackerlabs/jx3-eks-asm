@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: PaulRepo
+    provider: github
+    repository: standard-usage-schemas
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: paulrepo-standard-usage-schemas
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/PaulRepo/standard-usage-schemas.git
+  org: PaulRepo
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: standard-usage-schemas
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/PaulRepo/standard-usage-schemas
