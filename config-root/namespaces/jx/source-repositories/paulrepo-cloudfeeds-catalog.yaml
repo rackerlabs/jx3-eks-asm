@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: PaulRepo
+    provider: github
+    repository: cloudfeeds-catalog
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: paulrepo-cloudfeeds-catalog
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/PaulRepo/cloudfeeds-catalog.git
+  org: PaulRepo
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: cloudfeeds-catalog
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/PaulRepo/cloudfeeds-catalog
