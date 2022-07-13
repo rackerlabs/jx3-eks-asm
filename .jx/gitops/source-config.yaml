@@ -8,7 +8,6 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
-    - name: cloudfeeds-catalog
     scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
