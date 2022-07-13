@@ -6,10 +6,6 @@ data:
       repos:
       - rackerlabs/jx3-eks-asm
       require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
-      - PaulRepo/cloudfeeds-catalog
-      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -20,11 +16,6 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
-      PaulRepo/cloudfeeds-catalog:
-      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
-        name: cd-indicators
-      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
-        name: lighthouse-webui-plugin
       rackerlabs/jx3-eks-asm:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -35,22 +26,6 @@ data:
       additional_labels: null
     owners: {}
     plugins:
-      PaulRepo/cloudfeeds-catalog:
-      - approve
-      - assign
-      - blunderbuss
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - override
-      - size
-      - trigger
-      - wip
-      - heart
-      - cat
-      - dog
-      - pony
       rackerlabs/jx3-eks-asm:
       - config-updater
       - approve
@@ -80,11 +55,6 @@ data:
     - repos:
       - rackerlabs/jx3-eks-asm
       trusted_org: todo
-    - repos:
-      - PaulRepo/cloudfeeds-catalog
-      trusted_org: todo
-    welcome:
-    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
